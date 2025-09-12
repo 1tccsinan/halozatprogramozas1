@@ -31,4 +31,11 @@ print(tuple([1,2,3]))
 #git init : adott mappa verziókövetésének indítása
 #git add. :
 
-
+# Parancs	Leírás
+# git init	Új Git repository inicializálása
+# git clone <repo-url>	Repository letöltése GitHub-ról
+# git status	Módosítások állapotának ellenőrzése
+# git add <fájl>	Fájl hozzáadása a staging area-hoz
+# git add .	Minden módosított fájl hozzáadása
+# git commit -m "üzenet"	Módosítások commitolása
+# git push	Módosítások feltöltése GitHub-ra
