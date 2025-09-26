@@ -1,10 +1,13 @@
 #bekell kérni egy nevet és adja vissza a monogrammját pl: varga gyula vgy
 
+#Csipes Nándor, Ladányi Levente
+
+
 nev = input("Kérem a teljes nevet: ")
 ketjegyu_kezdetek = ["gy", "cs", "sz", "zs", "ty", "ly", "ny", "dz","dzs"]
 
 szavak = nev.strip().lower().split()
-mg = ""
+mg = " "
 
 for szo in szavak:
     if not szo: 
