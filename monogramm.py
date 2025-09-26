@@ -11,11 +11,16 @@ mg = ""
 for szo in szavak:
     if not szo: 
         continue
+    
+    kezdet = "" 
+    
     if len(szo) >= 3 and szo[:3] == "dzs":
-        mg += szo[:3]
+        kezdet = szo[:3]
     elif len(szo) >= 2 and szo[:2] in ket_vagy_haromjegyu_kezdetek:
-        mg += szo[:2]
+        kezdet = szo[:2]
     else:
-        mg += szo[0]
+        kezdet = szo[0]
+
+    mg += kezdet[0].upper() + kezdet[1:] if len(kezdet) > 1 else kezdet.upper()
 
 print(f"A monogram: {mg}")
