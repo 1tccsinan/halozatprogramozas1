@@ -36,11 +36,47 @@ else:
    
         
 # 4. Előfordult-e, hogy a róka kisebb libát lopott, mint az előző napon?
+volt_kisebb = False
+for index in range(len(libak)-1):
+    if libak[index] > libak[index+1]:
+        volt_kisebb = True
+        break
 
+if volt_kisebb:
+    print(f"Előfordult, hogy a róka kisebb libát lopott, mint az előző napon")
+else:
+    print(f"Nem előfordult, hogy a róka kisebb libát lopott, mint az előző napon")
 
 # 5. Hányadik napon sikerült először 3kg-nál nehezebb libát lopni?
+i = 0
+while not (libak[index] > 3):
+    index += 1
+print(f"{index+1} napon sikerült először 3kg-nál nehezebb libát lopni")
 # 6. Volt-e 6kg súlyú liba, ha volt akkor melyik napon?
+volt_6kg = None
+for i in range(len(libak)):
+    if libak[i] == 6:
+        volt_6kg = i + 1
+        break
+
+
 # 7. Hány liba jutott a héten a farkasnak?
+farkas_liba=[]
+for liba in libak:
+    if liba > 3:
+        farkas_liba.append(liba)
+
+print(farkas_liba)
+print(f"{len(farkas_liba)}")
 # 8. Hány kilós volt a rókánál maradó legnagyobb libának?
 
+max_index = 0
+for index in range(len(libak)):
+    if libak[index] > libak[max_index]:
+        max_index = index
+print(f"{libak[max_index]} kilós volt a rókánál maradó legnagyobb libának")
 
+
+with open ("libak_jo.txt", "w", encoding ="utf-8") as fout:
+    for liba in libak:
+        print(liba*1.1, file=fout)
